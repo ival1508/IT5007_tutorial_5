@@ -110,7 +110,7 @@ server.applyMiddleware({ app, path: '/graphql'}); //installing ApolloServer as a
 (async function() {
   try {
     await connectToDb(); //changing the setup of the server to first connect to the database and the start the Express application
-    app.listen(3000, function () {
+    app.listen(5000, function () {
     console.log('API Server started on port 3000');
   });
   } catch (err) {
