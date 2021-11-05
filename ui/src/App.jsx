@@ -227,7 +227,7 @@ class DisplayResSystem extends React.Component {
 
       const result = await response.json();
       
-      if (result.data.customerAdd.queue_number >= 5) {
+      if (result.data.customerAdd.queue_number >= 25) {
         this.setState({ TooManyCustomers: true});
         this.loadData();
       } else {

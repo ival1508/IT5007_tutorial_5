@@ -67,7 +67,7 @@ async function reduceSequenceByOne(name) {
 async function customerAdd(_, {customer} ) {
   customer.timestamp = new Date();
   customer.queue_number = await getNextSequence('customers')
-  if (customer.queue_number > 5) { //returning ID of a customer without adding customer to the database
+  if (customer.queue_number > 25) { //returning ID of a customer without adding customer to the database
     const counter = await reduceSequenceByOne('customers');
     console.log('Customers counter:', counter);
     return customer;
